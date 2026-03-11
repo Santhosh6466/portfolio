@@ -1,0 +1,52 @@
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@700,600&f[]=satoshi@400,500,700&display=swap');
+
+*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+::selection { background: #DB4A2B; color: #fff; }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #E4E2DD; }
+::-webkit-scrollbar-thumb { background: #1E1E1E; border-radius: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: #E4E2DD;
+  color: #1E1E1E;
+  font-family: 'Satoshi', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Grain overlay on the whole page */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.028;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(44px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes blobPulse {
+  0%,100% { opacity:.45; transform:translate(0,0) scale(1); }
+  33%     { opacity:.6;  transform:translate(28px,-18px) scale(1.04); }
+  66%     { opacity:.5;  transform:translate(-18px,26px) scale(.97); }
+}
+@keyframes blobPulse2 {
+  0%,100% { opacity:.38; transform:translate(0,0) scale(1); }
+  50%     { opacity:.55; transform:translate(-36px,22px) scale(1.06); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes pulse {
+  0%,100% { transform: scaleX(1); }
+  50%     { transform: scaleX(1.15); }
+}
