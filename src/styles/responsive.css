@@ -1,0 +1,147 @@
+/* ============================================================
+   RESPONSIVE — phone & tablet fixes only
+   No design changes, only layout adjustments
+   ============================================================ */
+
+/* ── Navbar ─────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  nav { padding: 16px 20px !important; }
+  .nav-desktop { display: none !important; }
+  .nav-hamburger { display: flex !important; }
+}
+
+/* ── Hero ────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .hero-section {
+    padding: 90px 20px 52px !important;
+    min-height: 100svh !important;
+  }
+}
+
+/* ── Skills ──────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .skills-grid {
+    padding: 0 20px 52px !important;
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+}
+
+/* ── Projects ────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr 1fr !important;
+    padding: 0 28px 56px !important;
+    gap: 12px !important;
+  }
+}
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+    padding: 0 20px 52px !important;
+  }
+}
+
+/* ── Education ───────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .edu-grid {
+    grid-template-columns: 1fr !important;
+    padding: 0 28px 32px !important;
+    gap: 10px !important;
+  }
+  .ach-grid {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+  .edu-bottom { padding: 0 28px 56px !important; }
+}
+@media (max-width: 600px) {
+  .edu-grid  { padding: 0 20px 28px !important; }
+  .edu-bottom { padding: 0 20px 52px !important; }
+}
+
+/* ── Certificates ────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .certs-grid {
+    grid-template-columns: 1fr 1fr !important;
+    padding: 0 28px 56px !important;
+    gap: 12px !important;
+  }
+}
+@media (max-width: 600px) {
+  .certs-grid {
+    grid-template-columns: 1fr !important;
+    padding: 0 20px 52px !important;
+  }
+}
+
+/* ── Lightbox (certificates modal) ──────────────────────── */
+@media (max-width: 640px) {
+  .lightbox-inner {
+    flex-direction: column !important;
+    gap: 24px !important;
+    width: 92% !important;
+    max-height: 85vh !important;
+    overflow-y: auto !important;
+  }
+  .lightbox-inner > div:first-child {
+    flex: none !important;
+    width: 100% !important;
+  }
+  .lightbox-inner > div:last-child {
+    flex: none !important;
+    width: 100% !important;
+  }
+}
+
+/* ── Contact ─────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 48px !important;
+    padding: 60px 28px 72px !important;
+  }
+}
+@media (max-width: 600px) {
+  .contact-grid {
+    padding: 48px 20px 64px !important;
+  }
+  .contact-name-email {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── Footer ──────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 28px !important;
+    padding: 40px 28px 28px !important; /* override inline padding */
+  }
+  /* Brand column spans full width */
+  .footer-grid > div:first-child {
+    grid-column: 1 / -1 !important;
+  }
+}
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    padding: 36px 20px 24px !important;
+  }
+  .footer-bottom {
+    flex-direction: column !important;
+    gap: 6px !important;
+    text-align: center !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+/* ── Section dividers ────────────────────────────────────── */
+@media (max-width: 640px) {
+  /* Reduce the big section header padding on mobile */
+  section > div:first-child {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
